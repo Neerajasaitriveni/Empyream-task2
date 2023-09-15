@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="663.0" maxWidth="553.0" minHeight="568.0" minWidth="510.0" prefHeight="568.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="550.0" text="RAILWAY RESERVATION FORM" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Line endX="497.79998779296875" endY="65.10001373291016" startX="56.89286804199219" startY="65.10000610351562" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="510.0" prefWidth="554.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="54.0" layoutY="82.0" prefHeight="32.0" prefWidth="126.0" text="Passenger Age">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <Label layoutX="55.0" layoutY="22.0" prefHeight="32.0" prefWidth="126.0" text="Passenger Name">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <Label layoutX="54.0" layoutY="187.0" prefHeight="32.0" prefWidth="126.0" text="Preferred Berth">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <Label layoutX="54.0" layoutY="135.0" prefHeight="32.0" prefWidth="126.0" text="Passenger Gender">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <Label layoutX="54.0" layoutY="241.0" prefHeight="32.0" prefWidth="126.0" text="Source">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <Label layoutX="53.0" layoutY="306.0" prefHeight="32.0" prefWidth="126.0" text="Destination">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <Label layoutX="53.0" layoutY="369.0" prefHeight="32.0" prefWidth="126.0" text="Date of Journey">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </Label>
+            <Button fx:id="ticket" layoutX="219.0" layoutY="431.0" mnemonicParsing="false" onAction="#saveInfo" prefHeight="38.0" prefWidth="87.0" text="Book" />
+            <TextField fx:id="PassName" layoutX="231.0" layoutY="22.0" minWidth="150.0" prefHeight="32.0" prefWidth="256.0">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="PassAge" layoutX="231.0" layoutY="82.0" prefHeight="32.0" prefWidth="256.0" />
+            <RadioButton fx:id="Mgender" layoutX="230.0" layoutY="138.0" mnemonicParsing="false" onAction="#genderSelect" text="Male">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderButtons" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Fgender" layoutX="317.0" layoutY="137.0" mnemonicParsing="false" onAction="#genderSelect" text="Female" toggleGroup="$genderButtons">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="Ogender" layoutX="419.0" layoutY="137.0" mnemonicParsing="false" onAction="#genderSelect" text="Others" toggleGroup="$genderButtons">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="Lberth" layoutX="231.0" layoutY="189.0" mnemonicParsing="false" onAction="#berthSelect" text="Lower">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="berthButtons" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Mberth" layoutX="318.0" layoutY="189.0" mnemonicParsing="false" onAction="#berthSelect" text="Middle" toggleGroup="$berthButtons">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="Uberth" layoutX="420.0" layoutY="189.0" mnemonicParsing="false" onAction="#berthSelect" text="Upper" toggleGroup="$berthButtons">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+            <DatePicker fx:id="journeydate" layoutX="230.0" layoutY="369.0" prefHeight="32.0" prefWidth="256.0" />
+            <ComboBox fx:id="source" layoutX="231.0" layoutY="239.0" onAction="#selectSource" prefHeight="32.0" prefWidth="256.0" promptText="Select Source">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </ComboBox>
+            <ComboBox fx:id="destination" layoutX="230.0" layoutY="304.0" onAction="#selectDest" prefHeight="32.0" prefWidth="256.0" promptText="Select Destination">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </ComboBox>            
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
